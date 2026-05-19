@@ -11,7 +11,7 @@ class Gabagool < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Kobie-Bendalak/Gabagool/releases/download/v0.1.0/gabagool_0.1.0_darwin_x86_64.tar.gz"
-      sha256 "f2d9878e0d7e56f2d42955127a333c548d0f696e42fe500a8234a67459d67c8d"
+      sha256 "c29b8738918a105e268b6c555c017bbc4db30bd388cf0752327c0893f0609e4b"
 
       define_method(:install) do
         bin.install "gabagool"
@@ -20,7 +20,7 @@ class Gabagool < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/Kobie-Bendalak/Gabagool/releases/download/v0.1.0/gabagool_0.1.0_darwin_arm64.tar.gz"
-      sha256 "27ff1d53b31c79b1f54b67f4e916a1a6e3378ec6cafd5674e2e056c84e21954e"
+      sha256 "63083fbbe7eae878dd5f94db493a5078d5cde06846af920c20f1995246dd0a8c"
 
       define_method(:install) do
         bin.install "gabagool"
@@ -32,7 +32,7 @@ class Gabagool < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/Kobie-Bendalak/Gabagool/releases/download/v0.1.0/gabagool_0.1.0_linux_x86_64.tar.gz"
-      sha256 "c6050c46288386235670a5e1f8d836799ea7d7ec7ab268519e257f10ff1c4f72"
+      sha256 "6d13330e969362eaa034af44ae555ee05132386d5cdb9103edd90f0fa5edcd74"
       define_method(:install) do
         bin.install "gabagool"
         generate_completions_from_executable(bin/"gabagool", "completion")
@@ -40,7 +40,7 @@ class Gabagool < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/Kobie-Bendalak/Gabagool/releases/download/v0.1.0/gabagool_0.1.0_linux_arm64.tar.gz"
-      sha256 "f0cdf57d214c20d9d1cd11d67e383816cdc99ee4e2e529063b36b7f577cdb88e"
+      sha256 "d87e3e1193936d43db6a43c64f53a10fe8dea56427dbb1eea671c190d0de1b3d"
       define_method(:install) do
         bin.install "gabagool"
         generate_completions_from_executable(bin/"gabagool", "completion")
