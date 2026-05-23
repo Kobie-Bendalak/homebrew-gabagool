@@ -3,8 +3,7 @@
 Install the Gabagool CLI:
 
 ```bash
-brew tap Kobie-Bendalak/gabagool
-brew install gabagool
+brew install Kobie-Bendalak/gabagool/gabagool
 ```
 
 First run:
