@@ -6,6 +6,12 @@ class Gabagool < Formula
   license "MIT"
   head "https://github.com/Kobie-Bendalak/Gabagool.git", branch: "main"
 
+  bottle do
+    root_url "https://github.com/Kobie-Bendalak/Gabagool/releases/download/v1.0.0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6101e9760dc4592777540a80825cd3d09c18f8f2c45a88701a30623f2b04cf83"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "30e548e48d0cf2df66c38f348716114b9a9ef4d75044a0ceb4e222325cf6217f"
+  end
+
   depends_on "go" => :build
   depends_on "python@3.12"
   depends_on "redis"
