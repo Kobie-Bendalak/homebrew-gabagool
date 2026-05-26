@@ -1,8 +1,8 @@
 class Gabagool < Formula
   desc "Local-first AI development control plane — governs intent, context, and multi-agent workflows"
   homepage "https://github.com/Kobie-Bendalak/Gabagool"
-  url "https://github.com/Kobie-Bendalak/Gabagool/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "876059fbcd58bcfe054e499c66d9ec2e8c93eba68e787adc010bc15695f92c37"
+  url "https://github.com/Kobie-Bendalak/Gabagool/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "ba7cc8acf0df5cce8512a4d83a57061d1514dca66b7fd4c5b8d614dee3dcdcd2"
   license "MIT"
   head "https://github.com/Kobie-Bendalak/Gabagool.git", branch: "main"
 
