@@ -5,13 +5,13 @@
 class Gabagool < Formula
   desc "Local-first AI development proxy and context engine"
   homepage "https://github.com/Kobie-Bendalak/Gabagool"
-  version "3.1.8"
+  version "3.1.10"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Kobie-Bendalak/gabagool-dist/releases/download/v3.1.8/gabagool_3.1.8_darwin_x86_64.tar.gz"
-      sha256 "8b62d49f9ae187f3c131304b173727cdef79b2e533b55991184db6d28e709b98"
+      url "https://github.com/Kobie-Bendalak/gabagool-dist/releases/download/v3.1.10/gabagool_3.1.10_darwin_x86_64.tar.gz"
+      sha256 "cb5dae9637969fe345e73aeb9a2454532cc1077e1f968e3b53476a96f1dbeebe"
 
       define_method(:install) do
         bin.install "gabagool"
@@ -19,8 +19,8 @@ class Gabagool < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Kobie-Bendalak/gabagool-dist/releases/download/v3.1.8/gabagool_3.1.8_darwin_arm64.tar.gz"
-      sha256 "6212adf67217e34b00923da8ac5286a180c63d634e061e5b68b471dd58230d71"
+      url "https://github.com/Kobie-Bendalak/gabagool-dist/releases/download/v3.1.10/gabagool_3.1.10_darwin_arm64.tar.gz"
+      sha256 "38fdf508765d42031d48ff3f689270f2ae5e9ef520ad5f4f4ec083f294bcf612"
 
       define_method(:install) do
         bin.install "gabagool"
@@ -31,16 +31,16 @@ class Gabagool < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Kobie-Bendalak/gabagool-dist/releases/download/v3.1.8/gabagool_3.1.8_linux_x86_64.tar.gz"
-      sha256 "6098ec0ec741e2775dba1d995ac728a306c8e7931cdab2fbc6cab6d7718fcc2c"
+      url "https://github.com/Kobie-Bendalak/gabagool-dist/releases/download/v3.1.10/gabagool_3.1.10_linux_x86_64.tar.gz"
+      sha256 "68a11c144ea86e564157dc6ecf3d99e03cf0d1bdb3f8a9965fc328f62115c433"
       define_method(:install) do
         bin.install "gabagool"
         generate_completions_from_executable(bin/"gabagool", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Kobie-Bendalak/gabagool-dist/releases/download/v3.1.8/gabagool_3.1.8_linux_arm64.tar.gz"
-      sha256 "f6f089e2904064377c5d722bb607ef63ebf0cab3ab57399a5bf7cbd3620c75d5"
+      url "https://github.com/Kobie-Bendalak/gabagool-dist/releases/download/v3.1.10/gabagool_3.1.10_linux_arm64.tar.gz"
+      sha256 "827ccc5d59b0f9694fcce968ffbb3567d6e24fe0d15c03e17ac8bd5cd98245ed"
       define_method(:install) do
         bin.install "gabagool"
         generate_completions_from_executable(bin/"gabagool", "completion")
