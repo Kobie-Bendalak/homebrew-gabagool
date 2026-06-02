@@ -5,45 +5,61 @@
 class Gabagool < Formula
   desc "Local-first AI development proxy and context engine"
   homepage "https://github.com/Kobie-Bendalak/Gabagool"
-  version "3.2.6"
+  version "3.2.7"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Kobie-Bendalak/gabagool-dist/releases/download/v3.2.6/gabagool_3.2.6_darwin_x86_64.tar.gz"
-      sha256 "113ccf028d01053bb2cc92f823ffa748b8cd5088ad16ad7f7a99641fc2457c40"
+      url "https://github.com/Kobie-Bendalak/gabagool-dist/releases/download/v3.2.7/gabagool_3.2.7_darwin_x86_64.tar.gz"
+      sha256 "6e7bcc7a0ff7ff011d66170444ac6ed6b2c4748f3ad287bf6ca2ebd1bac21d1f"
 
       define_method(:install) do
         bin.install "gabagool"
         generate_completions_from_executable(bin/"gabagool", "completion")
+
+        # Install scripts for all ENVs by default
+        libexec.install "scripts/ml_inference_server.py"
+        libexec.install Dir["scripts/*watchdog*"]
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Kobie-Bendalak/gabagool-dist/releases/download/v3.2.6/gabagool_3.2.6_darwin_arm64.tar.gz"
-      sha256 "f8e8e747a02d2bb2cf586b9fad0daa76f7347a1b93b014a423ef5548b9cfa60b"
+      url "https://github.com/Kobie-Bendalak/gabagool-dist/releases/download/v3.2.7/gabagool_3.2.7_darwin_arm64.tar.gz"
+      sha256 "a39e535335df83408d4fc0020f9ec97a55edde906b7dcafbdc3d904c894e4bce"
 
       define_method(:install) do
         bin.install "gabagool"
         generate_completions_from_executable(bin/"gabagool", "completion")
+
+        # Install scripts for all ENVs by default
+        libexec.install "scripts/ml_inference_server.py"
+        libexec.install Dir["scripts/*watchdog*"]
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Kobie-Bendalak/gabagool-dist/releases/download/v3.2.6/gabagool_3.2.6_linux_x86_64.tar.gz"
-      sha256 "6fde51a4ace09891c8a5564fdefe85a9e5143928e17f88733d20797f98b8e70e"
+      url "https://github.com/Kobie-Bendalak/gabagool-dist/releases/download/v3.2.7/gabagool_3.2.7_linux_x86_64.tar.gz"
+      sha256 "4f1990157d772cc48ccf41622ccd16cbd972dad012381083a0f1ad59dbe5fef0"
       define_method(:install) do
         bin.install "gabagool"
         generate_completions_from_executable(bin/"gabagool", "completion")
+
+        # Install scripts for all ENVs by default
+        libexec.install "scripts/ml_inference_server.py"
+        libexec.install Dir["scripts/*watchdog*"]
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Kobie-Bendalak/gabagool-dist/releases/download/v3.2.6/gabagool_3.2.6_linux_arm64.tar.gz"
-      sha256 "80b5e241bbf384b97217b8d1c80f6551d547ea1eb31ffbf91ccb87866870636a"
+      url "https://github.com/Kobie-Bendalak/gabagool-dist/releases/download/v3.2.7/gabagool_3.2.7_linux_arm64.tar.gz"
+      sha256 "db452e1f85bd1ad91390b88841ccde623211ea41e3921bd3de59f4bdcea35dbb"
       define_method(:install) do
         bin.install "gabagool"
         generate_completions_from_executable(bin/"gabagool", "completion")
+
+        # Install scripts for all ENVs by default
+        libexec.install "scripts/ml_inference_server.py"
+        libexec.install Dir["scripts/*watchdog*"]
       end
     end
   end
